@@ -37,14 +37,14 @@
 	Vibrio cholerae O1 biovar El Tor str. N16961	4033464
 
 ### Number of genomes containing at least two "c"s in species name
-	cut -f1 data_summary.tsv | tail -n +2 | sort -t$'\t' -k1 | uniq | grep -c "c.*c"
+	$ cut -f 3 ncbi_dataset.tsv | tail -n +2 | uniq | grep -io "c.*c" | wc -l
 ### Output: 
-	5 
+	7 
 
 ### Number of species names containing 2 or more "c"s but not the word "coccus"
-	$ cut -f1 data_summary.tsv | tail -n +2 | sort | uniq | grep "c.*c" | grep -v "coccus" | wc -l
+	$ cut -f 3 ncbi_dataset.tsv | tail -n +2 | uniq | grep -io "c.*c" | grep -v "coccus" | wc -l
 ### Output: 
-	3
+	5
 
 ### Using find command to find all genome files (FASTA) larger than 3Mb
 	$ find . -name "*.fna" -size +3M | wc -l
