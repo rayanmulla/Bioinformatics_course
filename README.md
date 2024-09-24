@@ -22,7 +22,7 @@
 	$ git commit -m "Added README.md"
 ### Push changes
 	$ git push
-#### type in username and Personal Access Token generated from github account settings
+#### Type in username and Personal Access Token generated from github account settings (Used ChatGPT 4.o  & learned to create a teken. The prompt asked was simply reporitng the error message when trying with the email and password used to create the github account on the website)
 
 ### Smallest genome sizes
 	$ sort -t$'\t' -k11,11n data_summary.tsv | head -n 2 | cut -f1,11 | uniq
